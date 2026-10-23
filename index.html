@@ -99,7 +99,7 @@
     img {
       display: block;
       width: 100%;
-      object-fit: cover;
+      object-fit: fill;
     }
 
     a {
@@ -445,7 +445,7 @@
       z-index: -2;
       inset: 0;
       background:
-        url('https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=2200&q=85')
+        url('bg.avif')
         center 55% / cover no-repeat;
     }
 
@@ -775,6 +775,148 @@
       color: #a8bdca;
       margin-top: 8px;
       font-size: .74rem;
+    }
+
+    .impact-gallery {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 58px;
+    }
+
+    .impact-gallery-item {
+      position: relative;
+      min-width: 0;
+      aspect-ratio: 3 / 4;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 7px;
+      background: var(--navy-light);
+      box-shadow: 0 12px 28px rgba(0,0,0,.18);
+    }
+
+    .impact-gallery-item::before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      inset: -14px;
+      background: var(--gallery-image) center / cover no-repeat;
+      filter: blur(12px) brightness(.58);
+      transform: scale(1.08);
+    }
+
+    .impact-gallery-item img {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      transition: filter .25s ease;
+    }
+
+    @media (hover: hover) {
+      .impact-gallery-item:hover img {
+        filter: brightness(1.06);
+      }
+    }
+
+    .impact-slider {
+      margin-top: 58px;
+      padding-block: 24px 28px;
+      border-block: 1px solid rgba(255,255,255,.14);
+    }
+
+    .impact-slider-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 20px;
+    }
+
+    .impact-slider-title {
+      margin: 0;
+      color: var(--white);
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(1.15rem, 2.2vw, 1.6rem);
+      font-weight: 700;
+      letter-spacing: -.35px;
+    }
+
+    .impact-slider-toggle {
+      flex: 0 0 auto;
+      min-width: 78px;
+      padding: 9px 15px;
+      border: 1px solid rgba(255,255,255,.38);
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      color: var(--white);
+      font: inherit;
+      font-size: .75rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background .2s ease, border-color .2s ease, color .2s ease;
+    }
+
+    .impact-slider-toggle:hover,
+    .impact-slider-toggle:focus-visible {
+      border-color: var(--yellow);
+      background: var(--yellow);
+      color: var(--navy);
+      outline: 0;
+    }
+
+    .impact-slider-viewport {
+      direction: ltr;
+      overflow: hidden;
+      padding-block: 4px;
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+      mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+    }
+
+    .impact-slider-track {
+      display: flex;
+      width: max-content;
+      animation: impactSliderScroll 36s linear infinite;
+      will-change: transform;
+    }
+
+    .impact-slider-group {
+      display: flex;
+      flex: none;
+      gap: 16px;
+      padding-inline-end: 16px;
+    }
+
+    .impact-slide {
+      display: grid;
+      place-items: center;
+      flex: 0 0 clamp(230px, 25vw, 340px);
+      height: clamp(112px, 12vw, 145px);
+      padding: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 8px;
+      background: var(--white);
+      box-shadow: 0 12px 28px rgba(0,0,0,.18);
+    }
+
+    .impact-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .impact-slider-viewport:hover .impact-slider-track,
+    .impact-slider.is-paused .impact-slider-track {
+      animation-play-state: paused;
+    }
+
+    @keyframes impactSliderScroll {
+      to {
+        transform: translate3d(-50%, 0, 0);
+      }
     }
 
     /* Case study */
@@ -1264,6 +1406,22 @@
         opacity: 1;
         transform: none;
       }
+
+      .impact-slider-track {
+        animation: none !important;
+        transform: none !important;
+      }
+
+      .impact-slider-group[aria-hidden="true"],
+      .impact-slider-toggle {
+        display: none;
+      }
+
+      .impact-slider-viewport {
+        overflow-x: auto;
+        -webkit-mask-image: none;
+        mask-image: none;
+      }
     }
 
     @media (max-width: 1100px) {
@@ -1365,6 +1523,15 @@
 
       .stat-card:nth-child(-n+2) {
         border-bottom: 1px solid rgba(255,255,255,.18);
+      }
+
+      .impact-gallery {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin-top: 44px;
+      }
+
+      .impact-slider {
+        margin-top: 44px;
       }
 
       .project-grid {
@@ -1529,6 +1696,26 @@
         font-size: .77rem;
       }
 
+      .impact-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .impact-slider-toolbar {
+        align-items: flex-start;
+      }
+
+      .impact-slider-group {
+        gap: 12px;
+        padding-inline-end: 12px;
+      }
+
+      .impact-slide {
+        flex-basis: 210px;
+        height: 108px;
+        padding: 14px;
+      }
+
       .case-image,
       .case-image img {
         min-height: 300px;
@@ -1646,7 +1833,7 @@
       <div class="container about-grid">
         <div class="about-visual reveal">
           <img
-            src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=1000&q=85"
+            src="lo.png"
             alt="Solar panels harvesting clean renewable energy"
             data-i18n-alt="aboutImageAlt"
             loading="lazy">
@@ -1693,27 +1880,102 @@
          
         </div>
 
-        <div class="stats-grid">
-          <div class="stat-card reveal">
-            <span class="stat-value" data-count="33.46" data-decimals="2" data-suffix=" MWp" data-unit="mwp" dir="auto">0 MWp</span>
-            <p data-i18n="statInstalled">Installed Solar Capacity</p>
-            <small data-i18n="statInstalledNote">Across 24 projects</small>
+        <div class="impact-slider reveal" role="region" aria-labelledby="impact-slider-title">
+          <div class="impact-slider-toolbar">
+            <h3 class="impact-slider-title" id="impact-slider-title" data-i18n="impactSliderTitle">Our Technology Partners</h3>
           </div>
-          <div class="stat-card reveal">
-            <span class="stat-value" data-count="56.2" data-decimals="1" data-suffix=" MWp" data-unit="mwp" dir="auto">0 MWp</span>
-            <p data-i18n="statPipeline">Project Pipeline</p>
-            <small data-i18n="statPipelineNote">Capacity in development</small>
+
+          <div class="impact-slider-viewport">
+            <div class="impact-slider-track" id="impact-slider-track">
+              <div class="impact-slider-group" role="list">
+                <div class="impact-slide" role="listitem">
+                  <img src="slide1.jpeg" alt="INVT" width="457" height="198" loading="lazy" decoding="async">
+                </div>
+                <div class="impact-slide" role="listitem">
+                  <img src="slide2.jpeg" alt="TIGFOX" width="260" height="89" loading="lazy" decoding="async">
+                </div>
+                <div class="impact-slide" role="listitem">
+                  <img src="slide3.jpg" alt="SRNE" width="169" height="61" loading="lazy" decoding="async">
+                </div>
+                <div class="impact-slide" role="listitem">
+                  <img src="slide4.jpeg" alt="Deye" width="241" height="106" loading="lazy" decoding="async">
+                </div>
+                <div class="impact-slide" role="listitem">
+                  <img src="slide5.jpg" alt="SAKO" width="167" height="87" loading="lazy" decoding="async">
+                </div>
+                <div class="impact-slide" role="listitem">
+                  <img src="slide6.jpeg" alt="Growatt" width="157" height="53" loading="lazy" decoding="async">
+                </div>
+                <div class="impact-slide" role="listitem">
+                  <img src="slide7.jpeg" alt="Solis" width="584" height="276" loading="lazy" decoding="async">
+                </div>
+                <div class="impact-slide" role="listitem">
+                  <img src="slide8.jpeg" alt="LONGi" width="126" height="56" loading="lazy" decoding="async">
+                </div>
+              </div>
+
+              <div class="impact-slider-group" aria-hidden="true">
+                <div class="impact-slide">
+                  <img src="slide1.jpeg" alt="" width="457" height="198" loading="lazy" decoding="async">
+                </div>
+                <div class="impact-slide">
+                  <img src="slide2.jpeg" alt="" width="260" height="89" loading="lazy" decoding="async">
+                </div>
+                <div class="impact-slide">
+                  <img src="slide3.jpg" alt="" width="169" height="61" loading="lazy" decoding="async">
+                </div>
+                <div class="impact-slide">
+                  <img src="slide4.jpeg" alt="" width="241" height="106" loading="lazy" decoding="async">
+                </div>
+                <div class="impact-slide">
+                  <img src="slide5.jpg" alt="" width="167" height="87" loading="lazy" decoding="async">
+                </div>
+                <div class="impact-slide">
+                  <img src="slide6.jpeg" alt="" width="157" height="53" loading="lazy" decoding="async">
+                </div>
+                <div class="impact-slide">
+                  <img src="slide7.jpeg" alt="" width="584" height="276" loading="lazy" decoding="async">
+                </div>
+                <div class="impact-slide">
+                  <img src="slide8.jpeg" alt="" width="126" height="56" loading="lazy" decoding="async">
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="stat-card reveal">
-            <span class="stat-value" data-count="5.9" data-decimals="1" data-prefix="$" data-suffix="M" data-unit="millionUsd" dir="auto">$0M</span>
-            <p data-i18n="statSavings">Annual Client Savings</p>
-            <small data-i18n="statSavingsNote">Indicative financial impact</small>
-          </div>
-          <div class="stat-card reveal">
-            <span class="stat-value" data-count="50386318" data-decimals="0" data-suffix="" data-unit="number" dir="auto">0</span>
-            <p data-i18n="statGenerated">Clean Energy Generated</p>
-            <small data-i18n="statGeneratedNote">kWh annually</small>
-          </div>
+        </div>
+
+        <!-- Add grid1.jpg through grid11.jpg beside index.html. -->
+        <div class="impact-gallery reveal" role="list" aria-label="Project gallery" data-i18n-aria-label="impactGalleryLabel">
+          <figure class="impact-gallery-item" role="listitem" style="--gallery-image: url('grid1.jpg')">
+            <img src="grid1.jpg" alt="Project gallery image 1" data-i18n-alt="impactGalleryImage1Alt" loading="lazy" decoding="async">
+          </figure>
+          <figure class="impact-gallery-item" role="listitem" style="--gallery-image: url('grid2.jpg')">
+            <img src="grid2.jpg" alt="Project gallery image 2" data-i18n-alt="impactGalleryImage2Alt" loading="lazy" decoding="async">
+          </figure>
+          <figure class="impact-gallery-item" role="listitem" style="--gallery-image: url('grid3.jpg')">
+            <img src="grid3.jpg" alt="Project gallery image 3" data-i18n-alt="impactGalleryImage3Alt" loading="lazy" decoding="async">
+          </figure>
+          <figure class="impact-gallery-item" role="listitem" style="--gallery-image: url('grid4.jpg')">
+            <img src="grid4.jpg" alt="Project gallery image 4" data-i18n-alt="impactGalleryImage4Alt" loading="lazy" decoding="async">
+          </figure>
+          <figure class="impact-gallery-item" role="listitem" style="--gallery-image: url('grid5.jpg')">
+            <img src="grid5.jpg" alt="Project gallery image 5" data-i18n-alt="impactGalleryImage5Alt" loading="lazy" decoding="async">
+          </figure>
+          <figure class="impact-gallery-item" role="listitem" style="--gallery-image: url('grid6.jpg')">
+            <img src="grid6.jpg" alt="Project gallery image 6" data-i18n-alt="impactGalleryImage6Alt" loading="lazy" decoding="async">
+          </figure>
+          <figure class="impact-gallery-item" role="listitem" style="--gallery-image: url('grid7.jpg')">
+            <img src="grid7.jpg" alt="Project gallery image 7" data-i18n-alt="impactGalleryImage7Alt" loading="lazy" decoding="async">
+          </figure>
+          <figure class="impact-gallery-item" role="listitem" style="--gallery-image: url('grid8.jpg')">
+            <img src="grid8.jpg" alt="Project gallery image 8" data-i18n-alt="impactGalleryImage8Alt" loading="lazy" decoding="async">
+          </figure>
+          <figure class="impact-gallery-item" role="listitem" style="--gallery-image: url('grid10.jpg')">
+            <img src="grid10.jpg" alt="Project gallery image 10" data-i18n-alt="impactGalleryImage10Alt" loading="lazy" decoding="async">
+          </figure>
+          <figure class="impact-gallery-item" role="listitem" style="--gallery-image: url('grid11.jpg')">
+            <img src="grid11.jpg" alt="Project gallery image 11" data-i18n-alt="impactGalleryImage11Alt" loading="lazy" decoding="async">
+          </figure>
         </div>
       </div>
     </section>
@@ -1725,7 +1987,7 @@
     <section class="section" id="why-us">
       <div class="container why-grid">
         <div class="why-image reveal">
-          <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=1000&q=85" alt="Renewable solar power installation" data-i18n-alt="whyImageAlt" loading="lazy">
+          <img src="log.png" alt="Renewable solar power installation" data-i18n-alt="whyImageAlt" loading="lazy">
         </div>
 
         <div class="reveal">
@@ -1920,6 +2182,9 @@
           copyright: "Copyright © {year} Bawabat Al Manara Energy. All rights reserved.",
           unitMwp: "MWp",
           unitMillionUsd: "M",
+          impactSliderTitle: "Our Technology Partners",
+          sliderPause: "Pause",
+          sliderPlay: "Play",
           termsAlert: "Terms & Conditions: Please replace this placeholder with the company-approved legal terms before publishing."
         },
         ar: {
@@ -1994,6 +2259,21 @@
           impactEyebrow: "الأثر الذي نصنعه",
           impactTitle: "ندفع عجلة التقدم بالطاقة الشمسية",
           impactIntro: "الأرقام المعروضة توضيحية ومقدمة لهذا التصور للموقع. يُرجى التأكد من أحدث أرقام الشركة قبل النشر التجاري.",
+          impactSliderTitle: "شركاؤنا في التكنولوجيا",
+          sliderPause: "إيقاف مؤقت",
+          sliderPlay: "تشغيل",
+          impactGalleryLabel: "معرض المشاريع",
+          impactGalleryImage1Alt: "صورة رقم 1 من معرض المشاريع",
+          impactGalleryImage2Alt: "صورة رقم 2 من معرض المشاريع",
+          impactGalleryImage3Alt: "صورة رقم 3 من معرض المشاريع",
+          impactGalleryImage4Alt: "صورة رقم 4 من معرض المشاريع",
+          impactGalleryImage5Alt: "صورة رقم 5 من معرض المشاريع",
+          impactGalleryImage6Alt: "صورة رقم 6 من معرض المشاريع",
+          impactGalleryImage7Alt: "صورة رقم 7 من معرض المشاريع",
+          impactGalleryImage8Alt: "صورة رقم 8 من معرض المشاريع",
+          impactGalleryImage9Alt: "صورة رقم 9 من معرض المشاريع",
+          impactGalleryImage10Alt: "صورة رقم 10 من معرض المشاريع",
+          impactGalleryImage11Alt: "صورة رقم 11 من معرض المشاريع",
           statInstalled: "القدرة الشمسية المركّبة",
           statInstalledNote: "ضمن 24 مشروعًا",
           statPipeline: "محفظة المشاريع",
@@ -2221,6 +2501,20 @@
       });
 
       setLanguage(getInitialLanguage(), false);
+
+      // Pause or resume the automatic partner-logo slider.
+      const impactSlider = document.querySelector('.impact-slider');
+      const impactSliderToggle = document.getElementById('impact-slider-toggle');
+
+      if (impactSlider && impactSliderToggle) {
+        impactSliderToggle.addEventListener('click', () => {
+          const isPaused = impactSlider.classList.toggle('is-paused');
+          const labelKey = isPaused ? 'sliderPlay' : 'sliderPause';
+
+          impactSliderToggle.dataset.i18n = labelKey;
+          impactSliderToggle.textContent = t(labelKey);
+        });
+      }
 
       // Accessible mobile navigation.
       menuToggle.addEventListener('click', () => {
