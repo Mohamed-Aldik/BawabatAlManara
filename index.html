@@ -1300,62 +1300,6 @@
       color: var(--yellow);
     }
 
-    /* Cookie notice */
-
-    .cookie-banner {
-      position: fixed;
-      z-index: 1200;
-      bottom: 20px;
-      inset-inline-start: 20px;
-      width: min(560px, calc(100% - 40px));
-      max-width: 560px;
-      padding: 22px;
-      border: 1px solid #d9e4ea;
-      border-radius: 8px;
-      background: var(--white);
-      box-shadow: 0 15px 60px rgba(0,0,0,.2);
-    }
-
-    .cookie-banner[hidden] {
-      display: none;
-    }
-
-    .cookie-banner h3 {
-      font-size: 1rem;
-      margin-bottom: 8px;
-    }
-
-    .cookie-banner p {
-      color: var(--muted);
-      font-size: .82rem;
-      margin-bottom: 16px;
-    }
-
-    .cookie-actions {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .cookie-actions button {
-      padding: 9px 15px;
-      border-radius: 3px;
-      border: 1px solid var(--navy);
-      cursor: pointer;
-      font-weight: 700;
-      font-size: .8rem;
-    }
-
-    .cookie-accept {
-      background: var(--navy);
-      color: var(--white);
-    }
-
-    .cookie-settings {
-      background: var(--white);
-      color: var(--navy);
-    }
-
     .cta-arrow {
       display: inline-block;
     }
@@ -1752,13 +1696,6 @@
         height: 250px;
         margin-top: 40px;
       }
-
-      .cookie-banner {
-        bottom: 10px;
-        inset-inline-start: 10px;
-        width: calc(100% - 20px);
-        padding: 18px;
-      }
     }
   </style>
 </head>
@@ -2154,19 +2091,6 @@
     </div>
   </footer>
 
-  <div class="cookie-banner" id="cookie-banner" hidden role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-description">
-    <h3 id="cookie-title" data-i18n="cookieTitle">Your Privacy Matters</h3>
-    <p id="cookie-description" data-i18n="cookieDescription">
-      This demonstration website uses essential browser functionality and
-      local storage for your cookie preference. External images and fonts may
-      be loaded from third-party providers.
-    </p>
-    <div class="cookie-actions">
-      <button type="button" class="cookie-accept" id="accept-cookies" data-i18n="cookieAccept">Accept</button>
-      <button type="button" class="cookie-settings" id="essential-cookies" data-i18n="cookieEssential">Essential Only</button>
-    </div>
-  </div>
-
   <script>
     (() => {
       'use strict';
@@ -2363,12 +2287,7 @@
           footerContactInfo: "معلومات الاتصال",
           footerLocation: "Iraq. Erbil. Italian Village, Villa No. 520",
           footerEnquiry: "أرسل استفسارًا",
-          terms: "الشروط والأحكام",
-          cookiePolicy: "سياسة ملفات تعريف الارتباط",
-          cookieTitle: "خصوصيتك تهمنا",
-          cookieDescription: "يستخدم هذا الموقع التجريبي وظائف المتصفح الأساسية والتخزين المحلي لحفظ تفضيلات ملفات تعريف الارتباط. وقد تُحمَّل الصور والخطوط الخارجية من مزوّدي خدمات تابعين لجهات خارجية.",
-          cookieAccept: "قبول",
-          cookieEssential: "الضرورية فقط"
+          terms: "الشروط والأحكام"
         }
       };
 
@@ -2639,51 +2558,14 @@
         statValues.forEach(animateStat);
       }
 
-      // Cookie notice. Preference is stored only after an explicit choice.
-      const cookieBanner = document.getElementById('cookie-banner');
-      const cookieAccept = document.getElementById('accept-cookies');
-      const essentialCookies = document.getElementById('essential-cookies');
-
-      function getCookiePreference() {
-        try {
-          return localStorage.getItem('Bawabat Al Manara-energy-cookie-preference');
-        } catch (error) {
-          return null;
-        }
-      }
-
-      function saveCookiePreference(value) {
-        try {
-          localStorage.setItem('Bawabat Al Manara-energy-cookie-preference', value);
-        } catch (error) {
-          // The page remains usable when storage is unavailable.
-        }
-        cookieBanner.hidden = true;
-      }
-
-      if (!getCookiePreference()) {
-        cookieBanner.hidden = false;
-      }
-
-      cookieAccept.addEventListener('click', () => {
-        saveCookiePreference('accepted');
-      });
-
-      essentialCookies.addEventListener('click', () => {
-        saveCookiePreference('essential-only');
-      });
-
       // The following links are explanatory placeholders for this prototype.
-      document.getElementById('terms-link').addEventListener('click', event => {
-        event.preventDefault();
-        alert(t('termsAlert'));
-      });
-
-      document.getElementById('cookie-policy-link').addEventListener('click', event => {
-        event.preventDefault();
-        cookieBanner.hidden = false;
-        cookieAccept.focus();
-      });
+      const termsLink = document.getElementById('terms-link');
+      if (termsLink) {
+        termsLink.addEventListener('click', event => {
+          event.preventDefault();
+          alert(t('termsAlert'));
+        });
+      }
     })();
   </script>
 </body>
