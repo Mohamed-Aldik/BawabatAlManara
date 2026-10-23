@@ -1,0 +1,2396 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#09263d">
+  <meta name="description" content="Bawabat Al Manara Energy delivers turnkey solar PV, rooftop EPC, microgrid, and renewable energy solutions across the IRAQ.">
+  <title>Bawabat Al Manara Energy | Solar Solutions Reinvented</title>
+
+  <script>
+    (() => {
+      let language = navigator.language.toLowerCase().startsWith('ar') ? 'ar' : 'en';
+      try {
+        const savedLanguage = localStorage.getItem('bawabat-language');
+        if (savedLanguage === 'ar' || savedLanguage === 'en') language = savedLanguage;
+      } catch (error) {
+        // Use the browser language when storage is unavailable.
+      }
+      document.documentElement.lang = language;
+      document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Noto+Kufi+Arabic:wght@400;500;600;700;800&amp;family=Poppins:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #09263d;
+      --navy-light: #123c56;
+      --blue: #007fa8;
+      --cyan: #00b8d9;
+      --yellow: #f7c843;
+      --white: #ffffff;
+      --text: #293746;
+      --muted: #697986;
+      --light: #f4f7f9;
+      --border: #e3e9ed;
+      --radius: 12px;
+      --shadow: 0 14px 40px rgba(9, 38, 61, .09);
+      --container: 1200px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      line-height: 1.7;
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    body, button, input, textarea {
+      font-family: 'Inter', sans-serif;
+    }
+
+    html[lang="ar"] body,
+    html[lang="ar"] button,
+    html[lang="ar"] input,
+    html[lang="ar"] textarea,
+    html[lang="ar"] h1,
+    html[lang="ar"] h2,
+    html[lang="ar"] h3,
+    html[lang="ar"] h4,
+    html[lang="ar"] .brand-name,
+    html[lang="ar"] .about-accent strong,
+    html[lang="ar"] .stat-value,
+    html[lang="ar"] .case-fact strong {
+      font-family: 'Noto Kufi Arabic', Tahoma, Arial, sans-serif;
+    }
+
+    html[lang="ar"] .brand-name,
+    html[lang="ar"] .brand-subtitle,
+    html[lang="ar"] .eyebrow,
+    html[lang="ar"] .project-category {
+      letter-spacing: 0;
+    }
+
+    html[lang="ar"] h1,
+    html[lang="ar"] h2 {
+      letter-spacing: 0;
+    }
+
+    html[lang="ar"] .project-category {
+      text-transform: none;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, input, textarea {
+      font: inherit;
+    }
+
+    button, a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button:focus-visible, a:focus-visible,
+    input:focus-visible, textarea:focus-visible {
+      outline: 3px solid var(--cyan);
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(var(--container), calc(100% - 44px));
+      margin-inline: auto;
+    }
+
+    .section {
+      padding: 100px 0;
+    }
+
+    .section-light {
+      background: var(--light);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--blue);
+      font-size: .76rem;
+      font-weight: 800;
+      letter-spacing: 2.2px;
+      text-transform: uppercase;
+      margin-bottom: 17px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      display: inline-block;
+      height: 3px;
+      width: 28px;
+      background: var(--yellow);
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.2;
+      color: var(--navy);
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      letter-spacing: -1.3px;
+      margin-bottom: 20px;
+    }
+
+    .section-intro {
+      max-width: 650px;
+      margin-bottom: 45px;
+    }
+
+    .section-intro p,
+    .body-copy {
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .section-heading-row {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 28px;
+      margin-bottom: 44px;
+    }
+
+    .section-heading-row .section-intro {
+      margin-bottom: 0;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 25px;
+      min-height: 50px;
+      border: 2px solid transparent;
+      border-radius: 4px;
+      background: var(--yellow);
+      color: var(--navy);
+      font-weight: 800;
+      font-size: .88rem;
+      transition: transform .25s, background .25s, color .25s;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      background: #ffda70;
+    }
+
+    .btn-dark {
+      color: var(--white);
+      background: var(--navy);
+    }
+
+    .btn-dark:hover {
+      color: var(--navy);
+      background: var(--yellow);
+    }
+
+    .btn-outline {
+      color: var(--white);
+      border-color: rgba(255,255,255,.65);
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      color: var(--navy);
+      background: var(--white);
+    }
+
+    /* Announcement bar */
+
+    .announcement {
+      background: var(--navy);
+      color: #dce7ed;
+      font-size: .77rem;
+    }
+
+    .announcement-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      min-height: 40px;
+    }
+
+    .announcement-note {
+      color: var(--yellow);
+      font-weight: 700;
+    }
+
+    .contact-meta {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .contact-meta a:hover {
+      color: var(--yellow);
+    }
+
+    /* Navigation */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,.97);
+      border-bottom: 1px solid rgba(9,38,61,.08);
+      backdrop-filter: blur(14px);
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 88px;
+      gap: 25px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .navbar > .brand {
+      min-width: 0;
+      gap: 8px;
+      flex-shrink: 1;
+    }
+
+    .brand-logo {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      position: relative;
+      display: grid;
+      place-items: center;
+      color: var(--navy);
+    }
+
+    .brand-mark svg {
+      width: 42px;
+      height: 42px;
+    }
+
+    .brand-name {
+      display: block;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.87rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      line-height: 1.2;
+      color: var(--navy);
+    }
+
+    .brand-subtitle {
+      display: block;
+      margin-top: 3px;
+      font-size: .58rem;
+      letter-spacing: 3px;
+      font-weight: 600;
+      color: var(--blue);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      list-style: none;
+      margin-inline-start: auto;
+    }
+
+    .nav-links a {
+      position: relative;
+      padding: 10px 0;
+      color: #354553;
+      font-size: .79rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .nav-links a:not(.nav-cta)::after {
+      content: "";
+      position: absolute;
+      inset-inline-start: 0;
+      bottom: 3px;
+      width: 0;
+      height: 2px;
+      background: var(--cyan);
+      transition: width .25s;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-links .nav-cta {
+      padding: 12px 18px;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 3px;
+    }
+
+    .nav-links .nav-cta:hover {
+      background: var(--blue);
+    }
+
+    .nav-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .language-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 74px;
+      height: 44px;
+      padding: 0 12px;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      background: var(--white);
+      color: var(--navy);
+      font-size: .74rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: color .2s, border-color .2s, background .2s;
+    }
+
+    .language-toggle:hover {
+      color: var(--white);
+      border-color: var(--blue);
+      background: var(--blue);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      background: var(--white);
+      color: var(--navy);
+      cursor: pointer;
+    }
+
+    /* Hero */
+
+    .hero {
+      position: relative;
+      min-height: 670px;
+      display: flex;
+      align-items: center;
+      color: var(--white);
+      background: var(--navy);
+      isolation: isolate;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      z-index: -2;
+      inset: 0;
+      background:
+        url('https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=2200&q=85')
+        center 55% / cover no-repeat;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      background: linear-gradient(90deg,
+        rgba(4,25,42,.94) 0%,
+        rgba(5,31,50,.79) 48%,
+        rgba(5,31,50,.30) 100%);
+    }
+
+    .hero-content {
+      max-width: 780px;
+      padding: 95px 0 110px;
+      margin-inline-end: auto;
+    }
+
+    .hero .eyebrow {
+      color: #b9f3ff;
+    }
+
+    .hero h1 {
+      color: var(--white);
+      font-size: clamp(2.7rem, 6vw, 5.1rem);
+      letter-spacing: -2.4px;
+      line-height: 1.12;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      color: var(--yellow);
+    }
+
+    .hero h1 .hero-title-main {
+      color: inherit;
+    }
+
+    .hero p {
+      max-width: 610px;
+      color: #e0eaf0;
+      font-size: clamp(1rem, 2vw, 1.12rem);
+      margin-bottom: 32px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .hero-bottom {
+      position: absolute;
+      bottom: 0;
+      inset-inline: 0;
+      border-top: 1px solid rgba(255,255,255,.2);
+      background: rgba(6,31,49,.35);
+    }
+
+    .hero-bottom-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      min-height: 63px;
+      color: #e4eef3;
+      font-size: .77rem;
+      font-weight: 600;
+    }
+
+    .hero-bottom strong {
+      color: var(--yellow);
+    }
+
+    /* About */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 75px;
+    }
+
+    .about-visual {
+      position: relative;
+      padding: 0;
+      padding-inline-end: 30px;
+      padding-block-end: 30px;
+    }
+
+    .about-visual > img {
+      height: 510px;
+      border-radius: 5px;
+    }
+
+    .about-accent {
+      position: absolute;
+      bottom: 0;
+      inset-inline-end: 0;
+      width: 54%;
+      padding: 25px;
+      background: var(--yellow);
+      color: var(--navy);
+      border: 8px solid var(--white);
+    }
+
+    .about-accent strong {
+      display: block;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.45rem;
+      line-height: 1.3;
+    }
+
+    .about-accent span {
+      font-size: .8rem;
+      font-weight: 600;
+    }
+
+    .about-content h2 {
+      margin-bottom: 24px;
+    }
+
+    .about-content > p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .feature-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 17px;
+      list-style: none;
+      margin: 28px 0 32px;
+    }
+
+    .feature-list li {
+      display: flex;
+      align-items: start;
+      gap: 10px;
+      font-size: .87rem;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    .check {
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      width: 23px;
+      height: 23px;
+      border-radius: 50%;
+      color: var(--navy);
+      background: #dff7fb;
+      font-size: .8rem;
+      font-weight: 800;
+    }
+
+    /* Specialities */
+
+    .speciality-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .speciality-card {
+      position: relative;
+      min-height: 320px;
+      overflow: hidden;
+      background: var(--navy);
+      border-radius: 5px;
+      isolation: isolate;
+      box-shadow: var(--shadow);
+    }
+
+    .speciality-card img {
+      position: absolute;
+      z-index: -2;
+      inset: 0;
+      height: 100%;
+      transition: transform .6s ease;
+    }
+
+    .speciality-card::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(4,25,42,.95), rgba(4,25,42,.03) 95%);
+      transition: background .3s;
+    }
+
+    .speciality-card:hover img {
+      transform: scale(1.08);
+    }
+
+    .speciality-card:hover::after {
+      background: linear-gradient(0deg, rgba(0,73,100,.97), rgba(4,25,42,.12));
+    }
+
+    .speciality-number {
+      position: absolute;
+      top: 19px;
+      inset-inline-end: 20px;
+      color: rgba(255,255,255,.8);
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .speciality-content {
+      position: absolute;
+      bottom: 0;
+      inset-inline: 0;
+      padding: 26px;
+      color: var(--white);
+    }
+
+    .speciality-content h3 {
+      color: var(--white);
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+    }
+
+    .speciality-content p {
+      color: #d8e6ed;
+      font-size: .86rem;
+      line-height: 1.6;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transform: translateY(8px);
+      transition: all .35s ease;
+    }
+
+    .speciality-card:hover .speciality-content p,
+    .speciality-card:focus-within .speciality-content p {
+      max-height: 110px;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .speciality-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      inset-inline-start: 0;
+      width: 50px;
+      height: 4px;
+      background: var(--yellow);
+      z-index: 2;
+    }
+
+    /* Statistics */
+
+    .stats-section {
+      position: relative;
+      background: var(--navy);
+      color: var(--white);
+      overflow: hidden;
+    }
+
+    .stats-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: .12;
+      background-image: radial-gradient(#8cdff0 1px, transparent 1px);
+      background-size: 25px 25px;
+      pointer-events: none;
+    }
+
+    .stats-section .container {
+      position: relative;
+    }
+
+    .stats-heading {
+      text-align: center;
+      max-width: 750px;
+      margin: 0 auto 50px;
+    }
+
+    .stats-heading h2 {
+      color: var(--white);
+    }
+
+    .stats-heading p {
+      color: #c1d2dd;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0;
+    }
+
+    .stat-card {
+      padding: 25px 24px;
+      text-align: center;
+      border-inline-end: 1px solid rgba(255,255,255,.18);
+    }
+
+    .stat-card:last-child {
+      border-inline-end: 0;
+    }
+
+    .stat-value {
+      display: block;
+      color: var(--yellow);
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(1.75rem, 3vw, 2.7rem);
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    .stat-card p {
+      color: #e1eaf0;
+      font-size: .87rem;
+    }
+
+    .stat-card small {
+      display: block;
+      color: #a8bdca;
+      margin-top: 8px;
+      font-size: .74rem;
+    }
+
+    /* Case study */
+
+    .case-study-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .case-image {
+      position: relative;
+      min-height: 440px;
+    }
+
+    .case-image img {
+      height: 440px;
+      border-radius: 5px;
+    }
+
+    .image-label {
+      position: absolute;
+      bottom: 22px;
+      inset-inline-start: 22px;
+      padding: 12px 18px;
+      background: var(--yellow);
+      color: var(--navy);
+      font-weight: 800;
+      font-size: .82rem;
+    }
+
+    .case-content h2 {
+      font-size: clamp(1.9rem, 3.6vw, 2.8rem);
+    }
+
+    .case-content > p {
+      color: var(--muted);
+      margin: 18px 0 26px;
+    }
+
+    .case-facts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .case-fact {
+      padding: 18px;
+      background: var(--light);
+      border-inline-start: 3px solid var(--cyan);
+    }
+
+    .case-fact strong {
+      display: block;
+      color: var(--navy);
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.22rem;
+    }
+
+    .case-fact span {
+      color: var(--muted);
+      font-size: .78rem;
+    }
+
+    /* Portfolio */
+
+    .portfolio-filters {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 34px;
+    }
+
+    .filter-btn {
+      padding: 10px 17px;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      color: var(--text);
+      background: var(--white);
+      font-weight: 700;
+      font-size: .8rem;
+      cursor: pointer;
+      transition: .2s;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--navy);
+      border-color: var(--navy);
+      color: var(--white);
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 26px;
+    }
+
+    .project-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      overflow: hidden;
+      transition: transform .3s, box-shadow .3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-7px);
+      box-shadow: var(--shadow);
+    }
+
+    .project-card[hidden] {
+      display: none;
+    }
+
+    .project-image {
+      position: relative;
+      height: 235px;
+      overflow: hidden;
+      background: #e7eef2;
+    }
+
+    .project-image img {
+      height: 100%;
+      transition: transform .5s;
+    }
+
+    .project-card:hover .project-image img {
+      transform: scale(1.05);
+    }
+
+    .project-category {
+      position: absolute;
+      bottom: 14px;
+      inset-inline-start: 14px;
+      padding: 6px 11px;
+      border-radius: 2px;
+      color: var(--navy);
+      background: var(--yellow);
+      font-size: .7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .7px;
+    }
+
+    .project-info {
+      padding: 23px;
+    }
+
+    .project-info h3 {
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+    }
+
+    .project-info p {
+      color: var(--muted);
+      font-size: .86rem;
+      margin-bottom: 18px;
+    }
+
+    .project-link {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      color: var(--blue);
+      font-weight: 800;
+      font-size: .8rem;
+    }
+
+    .project-link:hover {
+      color: var(--navy);
+    }
+
+    .portfolio-note {
+      color: var(--muted);
+      font-size: .78rem;
+      margin-top: 24px;
+    }
+
+    /* Why us */
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 65px;
+    }
+
+    .why-image img {
+      height: 480px;
+      border-radius: 5px;
+    }
+
+    .why-points {
+      display: grid;
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .why-point {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 17px;
+      align-items: start;
+    }
+
+    .why-icon {
+      display: grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 5px;
+      background: #e0f7fb;
+      color: var(--blue);
+      font-size: 1.25rem;
+      font-weight: 800;
+    }
+
+    .why-point h3 {
+      font-size: 1rem;
+      margin-bottom: 7px;
+    }
+
+    .why-point p {
+      color: var(--muted);
+      font-size: .87rem;
+    }
+
+    /* CTA */
+
+    .cta-band {
+      padding: 65px 0;
+      background: var(--yellow);
+    }
+
+    .cta-band-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .cta-band h2 {
+      font-size: clamp(1.7rem, 3vw, 2.5rem);
+      margin-bottom: 10px;
+    }
+
+    .cta-band p {
+      color: #4d5360;
+    }
+
+    /* Contact */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: start;
+    }
+
+    .contact-content > p {
+      color: var(--muted);
+      margin-bottom: 30px;
+    }
+
+    .contact-item {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 16px;
+      margin-bottom: 24px;
+      align-items: start;
+    }
+
+    .contact-icon {
+      display: grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 5px;
+      background: var(--navy);
+      color: var(--yellow);
+      font-size: 1.1rem;
+    }
+
+    .contact-item h3 {
+      font-size: .97rem;
+      margin-bottom: 4px;
+    }
+
+    .contact-item p,
+    .contact-item a {
+      color: var(--muted);
+      font-size: .88rem;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-item a:hover {
+      color: var(--blue);
+    }
+
+    .map-frame {
+      display: block;
+      width: 100%;
+      height: 300px;
+      border: 0;
+      margin-top: 65px;
+      border-radius: 5px;
+      background: #e6edf0;
+    }
+
+    /* Footer */
+
+    .site-footer {
+      background: #061b2c;
+      color: #c0ced8;
+    }
+
+    .footer-main {
+      padding: 70px 0 55px;
+      display: grid;
+      grid-template-columns: 1.4fr .8fr 1fr 1fr;
+      gap: 45px;
+    }
+
+    .footer-brand .brand-name {
+      color: var(--white);
+    }
+
+    .footer-brand .brand-subtitle {
+      color: var(--cyan);
+    }
+
+    .footer-brand p {
+      color: #aebfca;
+      font-size: .86rem;
+      margin-top: 23px;
+      max-width: 310px;
+    }
+
+    .footer-column h3 {
+      color: var(--white);
+      font-size: .96rem;
+      margin-bottom: 23px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .footer-links a {
+      font-size: .83rem;
+      color: #b6c6d1;
+      transition: color .2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--yellow);
+    }
+
+    .footer-bottom {
+      padding: 22px 0;
+      border-top: 1px solid rgba(255,255,255,.12);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      font-size: .76rem;
+      color: #a4b7c4;
+    }
+
+    .legal-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+    }
+
+    .legal-links a:hover {
+      color: var(--yellow);
+    }
+
+    /* Cookie notice */
+
+    .cookie-banner {
+      position: fixed;
+      z-index: 1200;
+      bottom: 20px;
+      inset-inline-start: 20px;
+      width: min(560px, calc(100% - 40px));
+      max-width: 560px;
+      padding: 22px;
+      border: 1px solid #d9e4ea;
+      border-radius: 8px;
+      background: var(--white);
+      box-shadow: 0 15px 60px rgba(0,0,0,.2);
+    }
+
+    .cookie-banner[hidden] {
+      display: none;
+    }
+
+    .cookie-banner h3 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+
+    .cookie-banner p {
+      color: var(--muted);
+      font-size: .82rem;
+      margin-bottom: 16px;
+    }
+
+    .cookie-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .cookie-actions button {
+      padding: 9px 15px;
+      border-radius: 3px;
+      border: 1px solid var(--navy);
+      cursor: pointer;
+      font-weight: 700;
+      font-size: .8rem;
+    }
+
+    .cookie-accept {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .cookie-settings {
+      background: var(--white);
+      color: var(--navy);
+    }
+
+    .cta-arrow {
+      display: inline-block;
+    }
+
+    a[href^="tel:"],
+    a[href^="mailto:"] {
+      direction: ltr;
+      unicode-bidi: isolate;
+    }
+
+    html[dir="rtl"] .hero::after {
+      background: linear-gradient(270deg,
+        rgba(4,25,42,.94) 0%,
+        rgba(5,31,50,.79) 48%,
+        rgba(5,31,50,.30) 100%);
+    }
+
+    html[dir="rtl"] .cta-arrow {
+      transform: scaleX(-1);
+    }
+
+    html[dir="rtl"] input[type="email"] {
+      direction: ltr;
+      text-align: left;
+    }
+
+    /* Motion and responsive layout */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    @media (max-width: 1100px) {
+      .nav-links {
+        gap: 13px;
+      }
+
+      .nav-links a {
+        font-size: .72rem;
+      }
+
+      .navbar {
+        gap: 16px;
+      }
+
+      .brand-name {
+        font-size: 1.02rem;
+      }
+
+      .site-header .brand-name {
+        font-size: .78rem;
+        letter-spacing: .6px;
+      }
+
+      .speciality-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .footer-main {
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 1050px) {
+      .menu-toggle {
+        display: grid;
+        place-items: center;
+      }
+
+      .nav-links {
+        position: absolute;
+        display: none;
+        top: 100%;
+        inset-inline: 0;
+        margin-inline-start: 0;
+        padding: 20px 24px 26px;
+        background: var(--white);
+        border-top: 1px solid var(--border);
+        box-shadow: 0 15px 25px rgba(9,38,61,.1);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 3px;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 12px 8px;
+        font-size: .9rem;
+      }
+
+      .nav-links .nav-cta {
+        text-align: center;
+        margin-top: 8px;
+      }
+    }
+
+    @media (max-width: 850px) {
+      .section {
+        padding: 75px 0;
+      }
+
+      .about-grid,
+      .case-study-grid,
+      .why-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 42px;
+      }
+
+      .about-visual {
+        max-width: 620px;
+      }
+
+      .about-visual > img {
+        height: 440px;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .stat-card:nth-child(2) {
+        border-inline-end: 0;
+      }
+
+      .stat-card:nth-child(-n+2) {
+        border-bottom: 1px solid rgba(255,255,255,.18);
+      }
+
+      .project-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .footer-main {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .cta-band-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: calc(100% - 34px);
+      }
+
+      .section {
+        padding: 60px 0;
+      }
+
+      .announcement-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px;
+        padding: 9px 0;
+      }
+
+      .contact-meta {
+        gap: 5px 14px;
+      }
+
+      .announcement-note {
+        font-size: .7rem;
+      }
+
+      .navbar {
+        min-height: 75px;
+      }
+
+      .brand-mark,
+      .brand-mark svg {
+        width: 36px;
+        height: 36px;
+      }
+
+      .brand-name {
+        font-size: .94rem;
+      }
+
+      .brand-logo {
+        width: 64px;
+        height: 64px;
+      }
+
+      .navbar > .brand {
+        flex: 1;
+      }
+
+      .nav-controls {
+        gap: 5px;
+      }
+
+      .language-toggle {
+        min-width: 62px;
+        height: 40px;
+        padding: 0 8px;
+        font-size: .68rem;
+      }
+
+      .menu-toggle {
+        width: 40px;
+        height: 40px;
+      }
+
+      .site-header .brand-name {
+        font-size: .68rem;
+        letter-spacing: .25px;
+        overflow-wrap: anywhere;
+      }
+
+      .brand-subtitle {
+        font-size: .5rem;
+        letter-spacing: 2.5px;
+      }
+
+      .hero {
+        min-height: 640px;
+      }
+
+      .hero-content {
+        padding: 80px 0 115px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.5rem, 12vw, 3.5rem);
+        letter-spacing: -1.5px;
+      }
+
+      .hero-bottom-inner {
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        gap: 3px;
+        padding: 12px 0;
+      }
+
+      .section-heading-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .about-visual {
+        padding-inline-end: 15px;
+        padding-block-end: 20px;
+      }
+
+      .about-visual > img {
+        height: 340px;
+      }
+
+      .about-accent {
+        width: 62%;
+        padding: 15px;
+        border-width: 5px;
+      }
+
+      .about-accent strong {
+        font-size: 1.12rem;
+      }
+
+      .feature-list {
+        grid-template-columns: 1fr;
+      }
+
+      .speciality-grid,
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .speciality-card {
+        min-height: 300px;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .stat-card {
+        padding: 22px 10px;
+      }
+
+      .stat-value {
+        font-size: 1.6rem;
+      }
+
+      .stat-card p {
+        font-size: .77rem;
+      }
+
+      .case-image,
+      .case-image img {
+        min-height: 300px;
+        height: 300px;
+      }
+
+      .case-facts {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .case-fact {
+        padding: 13px;
+      }
+
+      .case-fact strong {
+        font-size: 1rem;
+      }
+
+      .why-image img {
+        height: 340px;
+      }
+
+      .footer-main {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .map-frame {
+        height: 250px;
+        margin-top: 40px;
+      }
+
+      .cookie-banner {
+        bottom: 10px;
+        inset-inline-start: 10px;
+        width: calc(100% - 20px);
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="announcement">
+    <div class="container announcement-inner">
+      <span class="announcement-note" data-i18n="announcement">Powering a brighter, more sustainable future.</span>
+      <div class="contact-meta">
+        <a href="tel:+9647504493291">☎ +9647504493291</a>
+        <a href="tel:+9647504492033">☎ +9647504492033</a>
+        <a href="mailto:arbeeltrading@yahoo.com">✉ arbeeltrading@yahoo.com</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <nav class="container navbar" aria-label="Main navigation" data-i18n-aria-label="mainNavLabel">
+      <a href="#home" class="brand" aria-label="Bawabat Al Manara home" data-i18n-aria-label="brandHomeLabel">
+        <img class="brand-logo" src="logo.jpeg" alt="Bawabat Al Manara logo" data-i18n-alt="brandLogoAlt">
+        <span class="brand-text">
+          <span class="brand-name" data-i18n="brandLine1">Bawabat Al Manara General Trading and</span>
+          <span class="brand-name" data-i18n="brandLine2">Solar Energy Systems Installation Company</span>
+        </span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" data-i18n="navHome">Home</a></li>
+        <li><a href="#about" data-i18n="navAbout">About Us</a></li>
+        <li><a href="#team" data-i18n="navTeam">Team</a></li>
+        <li><a href="#why-us" data-i18n="navWhy">Why Bawabat Al Manara Energy</a></li>
+        <li><a href="#contact" class="nav-cta"><span data-i18n="navContact">Contact Us</span> <span class="cta-arrow" aria-hidden="true">↗</span></a></li>
+      </ul>
+
+      <div class="nav-controls">
+        <button class="language-toggle" id="language-toggle" type="button" aria-label="Switch to Arabic">العربية</button>
+        <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
+          <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M3 6h18M3 12h18M3 18h18"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <span class="eyebrow" data-i18n="heroEyebrow">Renewable Energy · IRAQ</span>
+          <h1><span class="hero-title-main" data-i18n="heroTitleMain">The Future of Renewable Energy —</span> <span data-i18n="heroTitleAccent">Solar Solutions Reinvented.</span></h1>
+          <p data-i18n="heroDescription">
+            Powering the region with clean, affordable energy through innovative
+            solar solutions engineered for a more sustainable tomorrow.
+          </p>
+          <div class="hero-actions">
+            <a class="btn" href="#about"><span data-i18n="discoverMore">Discover More</span> <span class="cta-arrow" aria-hidden="true">↗</span></a>
+            <a class="btn btn-outline" href="#projects" data-i18n="exploreProjects">Explore Our Projects</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-bottom">
+        <div class="container hero-bottom-inner">
+          <span data-i18n="heroBottomLead">Engineering a sustainable future, one project at a time.</span>
+          <span data-i18n-html="heroBottomServices"><strong>Solar PV</strong> · EPC · Operations &amp; Maintenance</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-visual reveal">
+          <img
+            src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=1000&q=85"
+            alt="Solar panels harvesting clean renewable energy"
+            data-i18n-alt="aboutImageAlt"
+            loading="lazy">
+          <div class="about-accent">
+            <strong data-i18n="aboutAccentTitle">Clean Energy.</strong>
+            <span data-i18n="aboutAccentText">Smarter Solutions. Lasting Impact.</span>
+          </div>
+        </div>
+
+        <div class="about-content reveal">
+          <span class="eyebrow" data-i18n="aboutEyebrow">Who We Are</span>
+          <h2 data-i18n="aboutTitle">Driving the Energy Transition Across the IRAQ</h2>
+          <p data-i18n="aboutParagraph1">
+            Bawabat Al Manara Energy is presented here as a renewable energy solutions
+            provider focused on delivering solar photovoltaic systems for
+            commercial, industrial and infrastructure applications.
+          </p>
+          <p data-i18n="aboutParagraph2">
+            From initial feasibility and engineering to procurement,
+            construction, commissioning and ongoing operations and maintenance,
+            our turnkey approach is designed to help businesses harness the
+            power of the sun.
+          </p>
+
+          <ul class="feature-list">
+            <li><span class="check">✓</span> <span data-i18n="featureTurnkey">Turnkey solar PV solutions</span></li>
+            <li><span class="check">✓</span> <span data-i18n="featureEngineering">Engineering excellence</span></li>
+            <li><span class="check">✓</span> <span data-i18n="featureSavings">Commercial energy savings</span></li>
+            <li><span class="check">✓</span> <span data-i18n="featureSupport">Long-term system support</span></li>
+          </ul>
+
+          <a href="#why-us" class="btn btn-dark"><span data-i18n="whyButton">Why Bawabat Al Manara Energy?</span> <span class="cta-arrow" aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+  
+
+    <section class="section stats-section" id="impact">
+      <div class="container">
+        <div class="stats-heading reveal">
+          <span class="eyebrow" data-i18n="impactEyebrow">Our Impact</span>
+          <h2 data-i18n="impactTitle">Powering Progress Through Solar</h2>
+         
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card reveal">
+            <span class="stat-value" data-count="33.46" data-decimals="2" data-suffix=" MWp" data-unit="mwp" dir="auto">0 MWp</span>
+            <p data-i18n="statInstalled">Installed Solar Capacity</p>
+            <small data-i18n="statInstalledNote">Across 24 projects</small>
+          </div>
+          <div class="stat-card reveal">
+            <span class="stat-value" data-count="56.2" data-decimals="1" data-suffix=" MWp" data-unit="mwp" dir="auto">0 MWp</span>
+            <p data-i18n="statPipeline">Project Pipeline</p>
+            <small data-i18n="statPipelineNote">Capacity in development</small>
+          </div>
+          <div class="stat-card reveal">
+            <span class="stat-value" data-count="5.9" data-decimals="1" data-prefix="$" data-suffix="M" data-unit="millionUsd" dir="auto">$0M</span>
+            <p data-i18n="statSavings">Annual Client Savings</p>
+            <small data-i18n="statSavingsNote">Indicative financial impact</small>
+          </div>
+          <div class="stat-card reveal">
+            <span class="stat-value" data-count="50386318" data-decimals="0" data-suffix="" data-unit="number" dir="auto">0</span>
+            <p data-i18n="statGenerated">Clean Energy Generated</p>
+            <small data-i18n="statGeneratedNote">kWh annually</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+  
+
+    <section class="section" id="why-us">
+      <div class="container why-grid">
+        <div class="why-image reveal">
+          <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=1000&q=85" alt="Renewable solar power installation" data-i18n-alt="whyImageAlt" loading="lazy">
+        </div>
+
+        <div class="reveal">
+          <span class="eyebrow" data-i18n="whyEyebrow">Why Bawabat Al Manara Energy</span>
+          <h2 data-i18n="whyTitle">Built Around Your Energy Needs</h2>
+          <p class="body-copy" data-i18n="whyIntro">
+            Every site has different energy demands, physical constraints and
+            operational priorities. A considered solar strategy begins with
+            understanding the customer and designing the right solution.
+          </p>
+
+          <div class="why-points">
+            <div class="why-point">
+              <span class="why-icon" aria-hidden="true">01</span>
+              <div>
+                <h3 data-i18n="whyPoint1Title">End-to-End Project Delivery</h3>
+                <p data-i18n="whyPoint1Text">Coordinated feasibility, design, procurement, installation and commissioning.</p>
+              </div>
+            </div>
+
+            <div class="why-point">
+              <span class="why-icon" aria-hidden="true">02</span>
+              <div>
+                <h3 data-i18n="whyPoint2Title">Commercially Focused Solutions</h3>
+                <p data-i18n="whyPoint2Text">System concepts informed by energy consumption, available space and investment objectives.</p>
+              </div>
+            </div>
+
+            <div class="why-point">
+              <span class="why-icon" aria-hidden="true">03</span>
+              <div>
+                <h3 data-i18n="whyPoint3Title">Long-Term Performance</h3>
+                <p data-i18n="whyPoint3Text">Operations and maintenance strategies designed to support system reliability and performance.</p>
+              </div>
+            </div>
+
+            <div class="why-point">
+              <span class="why-icon" aria-hidden="true">04</span>
+              <div>
+                <h3 data-i18n="whyPoint4Title">Regional Expertise</h3>
+                <p data-i18n="whyPoint4Text">Solar solutions developed with the IRAQ's commercial and industrial environment in mind.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band" id="team">
+      <div class="container cta-band-inner">
+        <div>
+          <h2 data-i18n="teamTitle">Let's Power Your Next Project.</h2>
+          <p data-i18n="teamText">Have a rooftop, industrial site or commercial property ready for solar?</p>
+        </div>
+        <a href="#contact" class="btn btn-dark"><span data-i18n="talkToTeam">Talk to Our Team</span> <span class="cta-arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <section class="section section-light" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-content reveal">
+            <span class="eyebrow" data-i18n="contactEyebrow">Get In Touch</span>
+            <h2 data-i18n="contactTitle">Start Your Solar Journey</h2>
+            <p data-i18n="contactIntro">
+              Tell us about your facility, energy needs or upcoming project.
+              Reach out to discuss a potential solar solution.
+            </p>
+
+            <div class="contact-item">
+              <span class="contact-icon" aria-hidden="true">⌖</span>
+              <div>
+                <h3 data-i18n="contactLocationTitle">Our Location</h3>
+                <p data-i18n="contactLocation">Iraq. Erbil. Italian Village, Villa No. 520</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-icon" aria-hidden="true">☎</span>
+              <div>
+                <h3 data-i18n="contactCall">Call Us</h3>
+                <a href="tel:+9647504492033">+9647504492033</a>
+                <a href="tel:+9647504493291">+9647504493291</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-icon" aria-hidden="true">✉</span>
+              <div>
+                <h3 data-i18n="contactEmail">Email Us</h3>
+                <a href="mailto:arbeeltrading@yahoo.com">arbeeltrading@yahoo.com</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-icon" aria-hidden="true">◷</span>
+              <div>
+                <h3 data-i18n="contactBusiness">Business Enquiries</h3>
+                <p data-i18n="contactBusinessText">Contact our team to arrange a project discussion.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <iframe
+          class="map-frame"
+          title="Map of Erbil Marina, Erbil"
+          data-i18n-title="mapTitle"
+          src="https://maps.google.com/maps?q=36.186237,43.969921&t=&z=14&ie=UTF8&iwloc=&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div class="footer-brand">
+        <a href="#home" class="brand" aria-label="Bawabat Al Manara Energy home" data-i18n-aria-label="footerBrandHomeLabel">
+                 <img class="brand-logo" src="logo.jpeg" alt="Bawabat Al Manara logo" data-i18n-alt="brandLogoAlt">
+
+          <span class="brand-text">
+          <span class="brand-name" data-i18n="brandLine1">Bawabat Al Manara General Trading and</span>
+          <span class="brand-name" data-i18n="brandLine2">Solar Energy Systems Installation Company</span>
+        </span>
+        </a>
+        <p data-i18n="footerAbout">
+          Advancing cleaner energy through solar photovoltaic technologies,
+          engineering solutions and a commitment to a more sustainable future.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-i18n="footerQuickLinks">Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="#home" data-i18n="navHome">Home</a></li>
+          <li><a href="#about" data-i18n="navAbout">About Us</a></li>
+          <li><a href="#why-us" data-i18n="navWhy">Why Bawabat Al Manara Energy</a></li>
+        </ul>
+      </div>
+
+   
+
+      <div class="footer-column">
+        <h3 data-i18n="footerContactInfo">Contact Information</h3>
+        <ul class="footer-links">
+          <li> <a href="tel:+9647504492033">+9647504492033</a>
+                <a href="tel:+9647504493291">+9647504493291</a></li>
+          
+          <li><a href="mailto:arbeeltrading@yahoo.com">arbeeltrading@yahoo.com</a></li>
+          <li><a href="#contact" data-i18n="footerLocation">Erbil Marina, IRAQ</a></li>
+          <li><a href="#contact"><span data-i18n="footerEnquiry">Send an Enquiry</span> <span class="cta-arrow" aria-hidden="true">↗</span></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p id="copyright-text">Copyright © <span id="copyright-year">2026</span> Bawabat Al Manara Energy. All rights reserved.</p>
+      <div class="legal-links">
+        <a href="#contact" data-i18n="navContact">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cookie-banner" id="cookie-banner" hidden role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-description">
+    <h3 id="cookie-title" data-i18n="cookieTitle">Your Privacy Matters</h3>
+    <p id="cookie-description" data-i18n="cookieDescription">
+      This demonstration website uses essential browser functionality and
+      local storage for your cookie preference. External images and fonts may
+      be loaded from third-party providers.
+    </p>
+    <div class="cookie-actions">
+      <button type="button" class="cookie-accept" id="accept-cookies" data-i18n="cookieAccept">Accept</button>
+      <button type="button" class="cookie-settings" id="essential-cookies" data-i18n="cookieEssential">Essential Only</button>
+    </div>
+  </div>
+
+  <script>
+    (() => {
+      'use strict';
+
+      const translations = {
+        en: {
+          pageTitle: "Bawabat Al Manara Energy | Solar Solutions Reinvented",
+          metaDescription: "Bawabat Al Manara Energy delivers turnkey solar PV, rooftop EPC, microgrid, and renewable energy solutions across Iraq.",
+          languageButton: "العربية",
+          languageButtonLabel: "Switch to Arabic",
+          menuOpen: "Open navigation menu",
+          menuClose: "Close navigation menu",
+          copyright: "Copyright © {year} Bawabat Al Manara Energy. All rights reserved.",
+          unitMwp: "MWp",
+          unitMillionUsd: "M",
+          termsAlert: "Terms & Conditions: Please replace this placeholder with the company-approved legal terms before publishing."
+        },
+        ar: {
+          pageTitle: "بوابة المنارة للطاقة | حلول شمسية برؤية جديدة",
+          metaDescription: "تقدّم بوابة المنارة للطاقة حلولًا متكاملة للطاقة الشمسية الكهروضوئية، ومشاريع الأسطح بنظام الهندسة والتوريد والإنشاء، والشبكات المصغّرة، وحلول الطاقة المتجددة في أنحاء العراق.",
+          languageButton: "English",
+          languageButtonLabel: "التبديل إلى اللغة الإنجليزية",
+          menuOpen: "فتح قائمة التنقل",
+          menuClose: "إغلاق قائمة التنقل",
+          copyright: "حقوق النشر © {year} بوابة المنارة للطاقة. جميع الحقوق محفوظة.",
+          unitMwp: "ميغاواط ذروة",
+          unitMillionUsd: "مليون دولار",
+          termsAlert: "الشروط والأحكام: يُرجى استبدال هذا النص المؤقت بالشروط القانونية المعتمدة من الشركة قبل النشر.",
+          announcement: "نمدّ مستقبلًا أكثر إشراقًا واستدامة بالطاقة.",
+          mainNavLabel: "التنقل الرئيسي",
+          brandHomeLabel: "الصفحة الرئيسية لبوابة المنارة",
+          brandLogoAlt: "شعار بوابة المنارة",
+          brandLine1: "بوابة المنارة للتجارة العامة",
+          brandLine2: "وتركيب أنظمة الطاقة الشمسية",
+          navHome: "الرئيسية",
+          navAbout: "من نحن",
+          navTeam: "فريقنا",
+          navWhy: "لماذا بوابة المنارة للطاقة؟",
+          navNews: "الأخبار",
+          navProjects: "مشاريعنا",
+          navContact: "تواصل معنا",
+          heroEyebrow: "الطاقة المتجددة · العراق",
+          heroTitleMain: "مستقبل الطاقة المتجددة —",
+          heroTitleAccent: "حلول شمسية برؤية جديدة.",
+          heroDescription: "نمدّ المنطقة بطاقة نظيفة وميسورة التكلفة من خلال حلول شمسية مبتكرة، مصممة هندسيًا من أجل غدٍ أكثر استدامة.",
+          discoverMore: "اكتشف المزيد",
+          exploreProjects: "استكشف مشاريعنا",
+          heroBottomLead: "نصنع مستقبلًا مستدامًا، مشروعًا تلو الآخر.",
+          heroBottomServices: "<strong>الطاقة الشمسية الكهروضوئية</strong> · الهندسة والتوريد والإنشاء · التشغيل والصيانة",
+          aboutImageAlt: "ألواح شمسية تنتج طاقة متجددة نظيفة",
+          aboutAccentTitle: "طاقة نظيفة.",
+          aboutAccentText: "حلول أذكى. أثر مستدام.",
+          aboutEyebrow: "من نحن",
+          aboutTitle: "نقود التحول في قطاع الطاقة في أنحاء العراق",
+          aboutParagraph1: "تُقدَّم بوابة المنارة للطاقة هنا بوصفها مزوّدًا لحلول الطاقة المتجددة، مع التركيز على تنفيذ أنظمة الطاقة الشمسية الكهروضوئية للتطبيقات التجارية والصناعية ومشاريع البنية التحتية.",
+          aboutParagraph2: "بدءًا من دراسات الجدوى الأولية والهندسة، مرورًا بالتوريد والإنشاء والتشغيل، ووصولًا إلى التشغيل والصيانة المستمرة، صُمم نهجنا المتكامل لمساعدة الشركات على الاستفادة من طاقة الشمس.",
+          featureTurnkey: "حلول متكاملة للطاقة الشمسية الكهروضوئية",
+          featureEngineering: "تميّز هندسي",
+          featureSavings: "وفورات في تكاليف الطاقة التجارية",
+          featureSupport: "دعم طويل الأمد للأنظمة",
+          whyButton: "لماذا بوابة المنارة للطاقة؟",
+          expertiseEyebrow: "خبراتنا",
+          expertiseTitle: "تخصصنا",
+          expertiseIntro: "تقنيات مرنة للطاقة المتجددة مصممة وفق احتياجات المباني الحديثة والشركات والمواقع الصناعية واسعة النطاق.",
+          discussProject: "ناقش مشروعك معنا",
+          speciality1Alt: "ألواح شمسية كهروضوئية",
+          speciality1Title: "حلول الطاقة الشمسية",
+          speciality1Text: "أنظمة طاقة شمسية كهروضوئية متكاملة، مصممة لتحسين كفاءة الطاقة وتقليل الاعتماد على الكهرباء التقليدية.",
+          speciality2Alt: "بنية تحتية لتوزيع الكهرباء",
+          speciality2Title: "الشبكات المصغّرة",
+          speciality2Text: "أنظمة طاقة منسّقة تجمع بين التوليد والتحكم والتخزين عند الحاجة لتعزيز المرونة والموثوقية.",
+          speciality3Alt: "عمارة مبنى معاصر",
+          speciality3Title: "حلول الخلايا الكهروضوئية المدمجة بالمباني (BIPV)",
+          speciality3Text: "خلايا كهروضوئية مدمجة بالمباني تُدخل تقنية الطاقة الشمسية ضمن العناصر المعمارية وأغلفة المباني.",
+          speciality4Alt: "مبنى تجاري حديث",
+          speciality4Title: "حلول الخلايا الكهروضوئية المثبّتة على المباني (BAPV)",
+          speciality4Text: "ألواح شمسية تُثبَّت على المنشآت القائمة للاستفادة بصورة أفضل من الأسطح وواجهات المباني المتاحة.",
+          speciality5Alt: "أعمال الهندسة والإنشاءات الصناعية",
+          speciality5Title: "حلول الطاقة الشمسية على الأسطح بنظام EPC",
+          speciality5Text: "خدمات متكاملة لهندسة وتوريد وإنشاء أنظمة الطاقة الشمسية على أسطح المستودعات والمنشآت الصناعية.",
+          speciality6Alt: "بنية تحتية للطاقة المتجددة",
+          speciality6Title: "حلول الطاقة الشمسية الأرضية",
+          speciality6Text: "منشآت كهروضوئية أرضية مصممة وفق ظروف الموقع ومتطلبات الطاقة ومساحة الأرض المتاحة.",
+          speciality7Alt: "بنية تحتية للطاقة الشمسية",
+          speciality7Title: "مظلات شمسية للسيارات والشاحنات",
+          speciality7Text: "مظلات شمسية للسيارات والشاحنات تولّد كهرباء متجددة وتوفّر مواقف مظللة في الوقت نفسه.",
+          impactEyebrow: "الأثر الذي نصنعه",
+          impactTitle: "ندفع عجلة التقدم بالطاقة الشمسية",
+          impactIntro: "الأرقام المعروضة توضيحية ومقدمة لهذا التصور للموقع. يُرجى التأكد من أحدث أرقام الشركة قبل النشر التجاري.",
+          statInstalled: "القدرة الشمسية المركّبة",
+          statInstalledNote: "ضمن 24 مشروعًا",
+          statPipeline: "محفظة المشاريع",
+          statPipelineNote: "قدرة قيد التطوير",
+          statSavings: "وفورات العملاء السنوية",
+          statSavingsNote: "أثر مالي تقديري",
+          statGenerated: "الطاقة النظيفة المولّدة",
+          statGeneratedNote: "كيلوواط ساعة سنويًا",
+          caseImageAlt: "ألواح شمسية كهروضوئية في منشأة تجارية",
+          caseLabel: "دراسة حالة مميزة · اربيل",
+          caseEyebrow: "مشروع تحت الضوء",
+          caseTitle: "مشروع الطاقة الشمسية في ساحة Bawabat Al Manara DIC",
+          caseDescription: "مشروع مميز للطاقة الشمسية الكهروضوئية بقدرة 501 كيلوواط ذروة في مجمع اربيل للاستثمار، يوضح كيف يمكن للمنشآت الصناعية واللوجستية استغلال المساحات المتاحة لإنتاج الطاقة المتجددة.",
+          caseCapacity: "قدرة الطاقة الشمسية الكهروضوئية",
+          caseErbil: "اربيل",
+          caseCommercial: "تجاري",
+          caseApplication: "تطبيق المشروع",
+          caseSolarPv: "الطاقة الشمسية الكهروضوئية",
+          caseTechnology: "تقنية متجددة",
+          caseEnquire: "استفسر عن حلول الطاقة الشمسية بنظام EPC",
+          portfolioEyebrow: "محفظة أعمالنا",
+          portfolioTitle: "إنجازاتنا",
+          portfolioIntro: "استكشف فئات تمثيلية من المشاريع الصناعية والتجارية. صور المشاريع توضيحية وليست بالضرورة صورًا فعلية للمنشآت المذكورة.",
+          filterProjectsLabel: "تصفية المشاريع",
+          filterAll: "جميع المشاريع",
+          filterWarehouses: "المستودعات",
+          filterIndustrial: "صناعي",
+          filterEquipment: "المعدات الثقيلة",
+          categoryWarehouse: "مستودع",
+          categoryIndustrial: "صناعي",
+          categoryEquipment: "المعدات الثقيلة",
+          categoryCommercial: "تجاري",
+          categoryEnergy: "أنظمة الطاقة",
+          project1Alt: "مستودع كبير ومنشأة لوجستية",
+          project1Title: "مستودع CPL Aromas",
+          project1Text: "أنظمة طاقة شمسية تجارية على الأسطح لتحسين كفاءة الطاقة في عمليات الخدمات اللوجستية والتخزين.",
+          project2Alt: "منشأة صناعية للزجاج والتصنيع",
+          project2Title: "مصنع الزجاج التقني والألمنيوم",
+          project2Text: "حلول طاقة صناعية مصممة وفق احتياجات منشآت التصنيع ومتطلباتها التشغيلية من الكهرباء.",
+          project3Alt: "آليات إنشاء ثقيلة في موقع صناعي",
+          project3Title: "الفارس للمعدات الثقيلة",
+          project3Text: "فرص للطاقة المتجددة في ساحات المعدات والمواقع الصناعية والشركات ذات الاحتياجات الكبيرة من الطاقة.",
+          project4Alt: "مقر أعمال تجاري",
+          project4Title: "حلول الطاقة الشمسية التجارية",
+          project4Text: "تصاميم لأنظمة كهروضوئية مخصصة للعقارات التجارية التي تسعى إلى تقليل استهلاك كهرباء الشبكة.",
+          project5Alt: "المساحة الداخلية لمستودع لوجستي حديث",
+          project5Title: "منشآت الطاقة الشمسية على الأسطح بنظام EPC",
+          project5Text: "تنسيق التصميم والتوريد والتركيب والتشغيل لمصفوفات شمسية كبيرة مثبّتة على الأسطح.",
+          project6Alt: "بنية تحتية للطاقة الكهربائية",
+          project6Title: "أنظمة الطاقة المتكاملة",
+          project6Text: "حلول قابلة للتوسع لتوليد الطاقة الشمسية ومراقبة الطاقة وتلبية احتياجات المواقع المختلفة.",
+          similarProject: "ناقش مشروعًا مماثلًا معنا",
+          portfolioNote: "ملاحظة: يجب التحقق من أوصاف المشاريع المسماة وبيانات أدائها بالرجوع إلى دراسات الحالة المعتمدة من الشركة قبل النشر.",
+          whyImageAlt: "منشأة للطاقة الشمسية المتجددة",
+          whyEyebrow: "لماذا بوابة المنارة للطاقة؟",
+          whyTitle: "مصممة حول احتياجاتك من الطاقة",
+          whyIntro: "لكل موقع احتياجات مختلفة من الطاقة وقيود مادية وأولويات تشغيلية خاصة. تبدأ الاستراتيجية المدروسة للطاقة الشمسية بفهم العميل وتصميم الحل المناسب.",
+          whyPoint1Title: "تنفيذ متكامل للمشروع",
+          whyPoint1Text: "تنسيق دراسة الجدوى والتصميم والتوريد والتركيب والتشغيل.",
+          whyPoint2Title: "حلول تركز على الجدوى التجارية",
+          whyPoint2Text: "تصاميم أنظمة تستند إلى استهلاك الطاقة والمساحة المتاحة والأهداف الاستثمارية.",
+          whyPoint3Title: "أداء طويل الأمد",
+          whyPoint3Text: "استراتيجيات تشغيل وصيانة مصممة لدعم موثوقية النظام وأدائه.",
+          whyPoint4Title: "خبرة إقليمية",
+          whyPoint4Text: "حلول شمسية مطوّرة مع مراعاة البيئة التجارية والصناعية في العراق.",
+          teamTitle: "لنمدّ مشروعك القادم بالطاقة.",
+          teamText: "هل لديك سطح أو موقع صناعي أو عقار تجاري جاهز للاستفادة من الطاقة الشمسية؟",
+          talkToTeam: "تحدث مع فريقنا",
+          contactEyebrow: "تواصل معنا",
+          contactTitle: "ابدأ رحلتك مع الطاقة الشمسية",
+          contactIntro: "أخبرنا عن منشأتك أو احتياجاتك من الطاقة أو مشروعك القادم. تواصل معنا لمناقشة حل شمسي محتمل.",
+          contactLocationTitle: "موقعنا",
+          contactLocation: "العراق. اربيل. القرية الإيطالية، فيلا رقم 520",
+          contactCall: "اتصل بنا",
+          contactEmail: "راسلنا",
+          contactBusiness: "استفسارات الأعمال",
+          contactBusinessText: "تواصل مع فريقنا لترتيب مناقشة مشروعك.",
+          mapTitle:  'Iraq. Erbil. Italian Village, Villa No. 520' ,
+          footerBrandHomeLabel: "الصفحة الرئيسية لبوابة المنارة للطاقة",
+          footerBrandSubtitle: "حلول الطاقة المتجددة",
+          footerAbout: "نساهم في تطوير الطاقة النظيفة من خلال تقنيات الطاقة الشمسية الكهروضوئية والحلول الهندسية والالتزام بمستقبل أكثر استدامة.",
+          footerQuickLinks: "روابط سريعة",
+          footerOurSolutions: "حلولنا",
+          footerBipvBapv: "BIPV وBAPV",
+          footerRooftop: "أنظمة الأسطح بنظام EPC",
+          footerGroundMount: "الطاقة الشمسية الأرضية",
+          footerContactInfo: "معلومات الاتصال",
+          footerLocation: "Iraq. Erbil. Italian Village, Villa No. 520",
+          footerEnquiry: "أرسل استفسارًا",
+          terms: "الشروط والأحكام",
+          cookiePolicy: "سياسة ملفات تعريف الارتباط",
+          cookieTitle: "خصوصيتك تهمنا",
+          cookieDescription: "يستخدم هذا الموقع التجريبي وظائف المتصفح الأساسية والتخزين المحلي لحفظ تفضيلات ملفات تعريف الارتباط. وقد تُحمَّل الصور والخطوط الخارجية من مزوّدي خدمات تابعين لجهات خارجية.",
+          cookieAccept: "قبول",
+          cookieEssential: "الضرورية فقط"
+        }
+      };
+
+      const root = document.documentElement;
+      const metaDescription = document.querySelector('meta[name="description"]');
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      const languageToggle = document.getElementById('language-toggle');
+      const statValues = document.querySelectorAll('.stat-value');
+      const copyrightText = document.getElementById('copyright-text');
+      const fallbackStrings = new Map();
+      const fallbackHtml = new Map();
+      let currentLanguage = 'en';
+
+      document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.dataset.i18n;
+        if (!fallbackStrings.has(key)) {
+          fallbackStrings.set(key, element.textContent.replace(/\s+/g, ' ').trim());
+        }
+      });
+
+      document.querySelectorAll('[data-i18n-html]').forEach(element => {
+        const key = element.dataset.i18nHtml;
+        if (!fallbackHtml.has(key)) fallbackHtml.set(key, element.innerHTML.trim());
+      });
+
+      [
+        ['data-i18n-alt', 'alt'],
+        ['data-i18n-title', 'title'],
+        ['data-i18n-placeholder', 'placeholder'],
+        ['data-i18n-aria-label', 'aria-label']
+      ].forEach(([dataAttribute, attribute]) => {
+        document.querySelectorAll('[' + dataAttribute + ']').forEach(element => {
+          const key = element.getAttribute(dataAttribute);
+          if (!fallbackStrings.has(key)) {
+            fallbackStrings.set(key, element.getAttribute(attribute) || '');
+          }
+        });
+      });
+
+      function t(key, replacements = {}) {
+        const languageStrings = translations[currentLanguage] || translations.en;
+        let value = languageStrings[key] ?? translations.en[key] ?? fallbackStrings.get(key) ?? key;
+
+        Object.entries(replacements).forEach(([name, replacement]) => {
+          value = value.replaceAll('{' + name + '}', replacement);
+        });
+
+        return value;
+      }
+
+      function getInitialLanguage() {
+        try {
+          const saved = localStorage.getItem('bawabat-language');
+          if (saved === 'ar' || saved === 'en') return saved;
+        } catch (error) {
+          // Language selection still works when storage is unavailable.
+        }
+
+        return navigator.language.toLowerCase().startsWith('ar') ? 'ar' : 'en';
+      }
+
+      function updateMenuLabel() {
+        const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-label', t(isOpen ? 'menuClose' : 'menuOpen'));
+      }
+
+      function setMenuOpen(isOpen) {
+        navLinks.classList.toggle('open', isOpen);
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+        updateMenuLabel();
+      }
+
+      function renderTranslatedContent() {
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+          element.textContent = t(element.dataset.i18n);
+        });
+
+        document.querySelectorAll('[data-i18n-html]').forEach(element => {
+          const key = element.dataset.i18nHtml;
+          element.innerHTML = translations[currentLanguage][key] ?? fallbackHtml.get(key) ?? '';
+        });
+
+        [
+          ['data-i18n-alt', 'alt'],
+          ['data-i18n-title', 'title'],
+          ['data-i18n-placeholder', 'placeholder'],
+          ['data-i18n-aria-label', 'aria-label']
+        ].forEach(([dataAttribute, attribute]) => {
+          document.querySelectorAll('[' + dataAttribute + ']').forEach(element => {
+            element.setAttribute(attribute, t(element.getAttribute(dataAttribute)));
+          });
+        });
+      }
+
+      function setLanguage(language, persist = true) {
+        currentLanguage = language === 'ar' ? 'ar' : 'en';
+        root.lang = currentLanguage;
+        root.dir = currentLanguage === 'ar' ? 'rtl' : 'ltr';
+        document.title = t('pageTitle');
+        metaDescription.setAttribute('content', t('metaDescription'));
+        renderTranslatedContent();
+
+        languageToggle.textContent = t('languageButton');
+        languageToggle.setAttribute('aria-label', t('languageButtonLabel'));
+        languageToggle.lang = currentLanguage === 'en' ? 'ar' : 'en';
+        languageToggle.dir = currentLanguage === 'en' ? 'rtl' : 'ltr';
+        copyrightText.textContent = t('copyright', {
+          year: String(new Date().getFullYear())
+        });
+
+        setMenuOpen(false);
+
+        statValues.forEach(element => {
+          const currentValue = Number(element.dataset.renderValue || 0);
+          element.textContent = formatStat(element, currentValue);
+        });
+
+        if (persist) {
+          try {
+            localStorage.setItem('bawabat-language', currentLanguage);
+          } catch (error) {
+            // Language selection remains active for this visit.
+          }
+        }
+      }
+
+      languageToggle.addEventListener('click', () => {
+        setLanguage(currentLanguage === 'en' ? 'ar' : 'en');
+      });
+
+      setLanguage(getInitialLanguage(), false);
+
+      // Accessible mobile navigation.
+      menuToggle.addEventListener('click', () => {
+        setMenuOpen(menuToggle.getAttribute('aria-expanded') !== 'true');
+      });
+
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          setMenuOpen(false);
+        });
+      });
+
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape') {
+          setMenuOpen(false);
+        }
+      });
+
+      // Project category filtering.
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const projectCards = document.querySelectorAll('.project-card');
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const filter = button.dataset.filter;
+
+          filterButtons.forEach(item => {
+            const selected = item === button;
+            item.classList.toggle('active', selected);
+            item.setAttribute('aria-pressed', String(selected));
+          });
+
+          projectCards.forEach(card => {
+            card.hidden = filter !== 'all' && card.dataset.category !== filter;
+          });
+        });
+      });
+
+      // Reveal elements as they enter the viewport.
+      const revealElements = document.querySelectorAll('.reveal');
+      const prefersReducedMotion = window.matchMedia(
+        '(prefers-reduced-motion: reduce)'
+      ).matches;
+
+      if ('IntersectionObserver' in window && !prefersReducedMotion) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+
+        revealElements.forEach(element => revealObserver.observe(element));
+      } else {
+        revealElements.forEach(element => element.classList.add('visible'));
+      }
+
+      // Animate the supplied impact figures once.
+      function formatStat(element, value) {
+        const decimals = Number(element.dataset.decimals || 0);
+        const prefix = element.dataset.prefix || '';
+        const suffix = element.dataset.suffix || '';
+        const locale = currentLanguage === 'ar' ? 'ar-IQ' : 'en-US';
+
+        const formatted = value.toLocaleString(locale, {
+          minimumFractionDigits: decimals,
+          maximumFractionDigits: decimals
+        });
+
+        if (currentLanguage === 'ar') {
+          if (element.dataset.unit === 'mwp') return formatted + ' ' + t('unitMwp');
+          if (element.dataset.unit === 'millionUsd') {
+            return formatted + ' ' + t('unitMillionUsd');
+          }
+          return formatted;
+        }
+
+        return prefix + formatted + suffix;
+      }
+
+      function animateStat(element) {
+        if (element.dataset.animated === 'true') return;
+        element.dataset.animated = 'true';
+
+        const target = Number(element.dataset.count);
+        const duration = 1500;
+        const start = performance.now();
+
+        function step(now) {
+          const progress = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 4);
+          const current = target * eased;
+
+          element.dataset.renderValue = String(current);
+          element.textContent = formatStat(element, current);
+
+          if (progress < 1) {
+            requestAnimationFrame(step);
+          } else {
+            element.dataset.renderValue = String(target);
+            element.textContent = formatStat(element, target);
+          }
+        }
+
+        requestAnimationFrame(step);
+      }
+
+      if ('IntersectionObserver' in window && !prefersReducedMotion) {
+        const statsObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              animateStat(entry.target);
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.4 });
+
+        statValues.forEach(element => statsObserver.observe(element));
+      } else {
+        statValues.forEach(animateStat);
+      }
+
+      // Cookie notice. Preference is stored only after an explicit choice.
+      const cookieBanner = document.getElementById('cookie-banner');
+      const cookieAccept = document.getElementById('accept-cookies');
+      const essentialCookies = document.getElementById('essential-cookies');
+
+      function getCookiePreference() {
+        try {
+          return localStorage.getItem('Bawabat Al Manara-energy-cookie-preference');
+        } catch (error) {
+          return null;
+        }
+      }
+
+      function saveCookiePreference(value) {
+        try {
+          localStorage.setItem('Bawabat Al Manara-energy-cookie-preference', value);
+        } catch (error) {
+          // The page remains usable when storage is unavailable.
+        }
+        cookieBanner.hidden = true;
+      }
+
+      if (!getCookiePreference()) {
+        cookieBanner.hidden = false;
+      }
+
+      cookieAccept.addEventListener('click', () => {
+        saveCookiePreference('accepted');
+      });
+
+      essentialCookies.addEventListener('click', () => {
+        saveCookiePreference('essential-only');
+      });
+
+      // The following links are explanatory placeholders for this prototype.
+      document.getElementById('terms-link').addEventListener('click', event => {
+        event.preventDefault();
+        alert(t('termsAlert'));
+      });
+
+      document.getElementById('cookie-policy-link').addEventListener('click', event => {
+        event.preventDefault();
+        cookieBanner.hidden = false;
+        cookieAccept.focus();
+      });
+    })();
+  </script>
+</body>
+</html>
